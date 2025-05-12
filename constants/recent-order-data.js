@@ -1,0 +1,51 @@
+const RECENT_ORDER_DATA = [
+  {
+    coin: "2.000.000",
+    total: "10",
+    price: "500",
+    growth: "100%",
+    growthColor: "success",
+  },
+  {
+    coin: "3.000.000",
+    total: "0.00",
+    price: "$594.50",
+    growth: "50%",
+    growthColor: "warning",
+  },
+  {
+    coin: "zzzz",
+    total: "zzzz",
+    price: "zzzzzz",
+    growth: "zzzzz",
+    growthColor: "aaa",
+  },
+  {
+    coin: "aaa",
+    total: "0aaaa",
+    price: "aaaa3949",
+    growth: "aaaa00%",
+    growthColor: "success",
+  },
+  {
+    coin: "DOGE",
+    total: "0.00",
+    price: "$0.12688",
+    growth: "-0.02%",
+    growthColor: "danger",
+  },
+  {
+    coin: "SOL",
+    total: "0.00",
+    price: "$155.26",
+    growth: "+10.00%",
+    growthColor: "success",
+  },
+  {
+    coin: "SHIB",
+    total: "0.00",
+    price: "$0.00001894",
+    growth: "0.00%",
+    growthColor: "info-dark",
+  },
+];

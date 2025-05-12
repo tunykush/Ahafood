@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="./images/ahalogo.png" alt="Logo" />
+            <h2>
+              Aha<span style="color: #ff7f32;">Food</span><span style="color: #ff7f32; font-size: 0.5em; vertical-align: super;">.ai</span>
+            </h2>            
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="#" class="active">
+            <span class="material-icons-sharp"> dashboard </span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="./personal.html">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Personal </h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> smart_toy</span>
+            <h3>Chatbot training</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> insights </span>
+            <h3>Report  </h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> local_shipping </span>
+            <h3>Track order</h3>
+            <span class="message-count">26</span>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">campaign </span>
+            <h3>Marketing</h3>
+          </a>
+          <a href="./pricingtable.html">
+            <span class="material-icons-sharp"> request_quote </span>
+            <h3>Pricing Table</h3>
+          <a href="#">
+            <span class="material-icons-sharp"> settings </span>
+            <h3>Settings</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> add </span>
+            <h3>Add Product</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+
+      <main>
+        <h1>Dashboard</h1>
+
+        <div class="date">
+          <input type="date" />
+        </div>
+
+        <div class="insights">
+          <!-- SALES -->
+<div class="sales">
+  <span class="material-icons-sharp"> wallet </span>
+  <div class="middle">
+    <div class="left">
+      <h3>Revenue</h3>
+      <h1>2.400.000</h1>
+    </div>
+    <div class="progress">
+      <span class="material-icons-sharp trend up">trending_up</span>
+      <!-- Nếu tick down thì comment dòng trên và bật dòng dưới -->
+      <!-- <span class="material-icons-sharp trend down">trending_down</span> -->
+    </div>
+  </div>
+  <small class="text-muted"> Last 24 hours </small>
+</div>
+
+          <!-- EXPENSES -->
+          <div class="expenses">
+            <span class="material-icons-sharp"> bar_chart </span>
+            <div class="middle">
+              <div class="left">
+                <h3>Today's order</h3>
+                <h1>11</h1>
+              </div>
+              <div class="progress">
+                <span class="material-icons-sharp trend down">trending_down</span>
+              </div>
+            </div>
+            <small class="text-muted"> Last 24 hours </small>
+          </div>
+
+          <!-- INCOME -->
+          <div class="income">
+            <span class="material-icons-sharp"> paid </span>
+            <div class="middle">
+              <div class="left">
+                <h3>Total Coin</h3>
+                <h1>50</h1>
+              </div>
+              <div class="progress">
+                <span class="material-icons-sharp trend down">trending_down</span>
+              </div>
+            </div>
+            <small class="text-muted"> Last 24 hours </small>
+          </div>
+        </div>
+
+        <div class="holding">
+          <h2>Today</h2>
+          <table id="holding--table">
+            <thead>
+              <tr>
+                <th>aaa</th>
+                <th>bbb</th>
+                <th>ccc</th>
+                <th>ddd</th>
+                <th></th>
+              </tr>
+            </thead>
+            <!-- Add tbody here | JS insertion -->
+          </table>
+          <a href="#">Show All</a>
+        </div>
+      </main>
+
+      <div class="right">
+        <div class="top">
+          <button id="menu-btn">
+            <span class="material-icons-sharp"> menu </span>
+          </button>
+          <div class="theme-toggler">
+            <span class="material-icons-sharp active"> light_mode </span>
+            <span class="material-icons-sharp"> dark_mode </span>
+          </div>
+          <div class="profile">
+            <div class="info">
+              <p>Welcome back, <b>Minh</b></p>
+              <small class="text-muted">User</small>
+            </div>
+            <div class="profile-photo">
+              <img src="./images/P1.jpg" alt="Profile Picture" />
+            </div>
+          </div>
+        </div>
+
+        <div class="square">
+          <h2>Square</h2>
+          <!-- Add updates div here | JS insertion -->
+        </div>
+
+        <div class="coin-markets">
+          <h2>News</h2>
+          <div id="analytics">
+            <!-- Add items div here | JS insertion -->
+          </div>
+          <div class="item add-coin">
+            <div>
+              <span class="material-icons-sharp"> add </span>
+              <h3>Add notification</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./constants/recent-order-data.js"></script>
+    <script src="./constants/update-data.js"></script>
+    <script src="./constants/sales-analytics-data.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
+
