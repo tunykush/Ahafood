@@ -634,35 +634,29 @@ main .holding a {
 }
 
 /* Chatbot Button */
+/* Chatbot Button */
 #chatbot-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 9999;
+  animation: gentleSlide 3s ease-in-out infinite alternate;
   transition: transform 0.3s;
-  z-index: 999;
-}
-#chatbot-icon:hover {
-  transform: scale(1.1);
 }
 #chatbot-icon img {
-  width: 80%;
+  width: 100%;
   height: auto;
+  border-radius: 50%;
 }
 
 /* Tooltip */
 .chat-tooltip {
   position: absolute;
   bottom: 80px;
-  right: -20px;
+  right: 0;
   background-color: var(--color-primary);
   color: white;
   padding: 0.6rem 1rem;
@@ -670,10 +664,28 @@ main .holding a {
   font-size: 0.75rem;
   white-space: nowrap;
   display: none;
+  z-index: 10000;
 }
 #chatbot-icon:hover .chat-tooltip {
   display: block;
 }
+
+/* Sliding Animation */
+@keyframes gentleSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px); /* Smaller movement */
+  }
+}
+
+/* Pause on Hover */
+#chatbot-icon:hover {
+  animation-play-state: paused;
+}
+
+
 
 /* Chat Popup */
 .chat-popup {

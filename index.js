@@ -188,3 +188,13 @@ function generateBotResponse(message) {
   ];
   return responses[Math.floor(Math.random() * responses.length)];
 }
+
+// Toggle Chatbot Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const chatbotIcon = document.getElementById("chatbot-icon");
+
+  // Stop animation on click
+  chatbotIcon.addEventListener("click", () => {
+    chatbotIcon.classList.toggle("paused");
+  });
+});
