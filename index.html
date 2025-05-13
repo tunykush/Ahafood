@@ -32,7 +32,7 @@
             <span class="material-icons-sharp"> dashboard </span>
             <h3>Dashboard</h3>
           </a>
-          <a href="./personal.html">
+          <a href="./html/personal.html">
             <span class="material-icons-sharp"> person_outline </span>
             <h3>Personal </h3>
           </a>
@@ -53,7 +53,7 @@
             <span class="material-icons-sharp">campaign </span>
             <h3>Marketing</h3>
           </a>
-          <a href="./pricingtable.html">
+          <a href="./html/pricingtable.html">
             <span class="material-icons-sharp"> request_quote </span>
             <h3>Pricing Table</h3>
           <a href="#">
@@ -189,6 +189,27 @@
     <script src="./constants/update-data.js"></script>
     <script src="./constants/sales-analytics-data.js"></script>
     <script src="./index.js"></script>
+    <!-- Chatbot Icon -->
+<div id="chatbot-icon" onclick="toggleChat()">
+  <img src="/images/ahagent.png" alt="Chatbot Icon" />
+  <div class="chat-tooltip">Hôm nay bạn ra sao?</div>
+</div>
+
+<!-- Chatbot Popup -->
+<div id="chatbot-popup" class="chat-popup">
+  <div class="chat-header">
+    <span>Chat với Ahamove AI</span>
+    <button onclick="toggleChat()" class="close-chat">X</button>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="chat-message bot">Xin chào! Hôm nay bạn thế nào? 😊</div>
+  </div>
+  <div class="chat-footer">
+    <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChat(event)" />
+    <button onclick="sendMessage()">Gửi</button>
+  </div>
+</div>
+
   </body>
 </html>
 
