@@ -52,7 +52,8 @@ const buildUpdatesList = () => {
           <img src="${update.imgSrc}" />
         </div>
         <div class="message">
-          <p><b>${update.profileName}</b> ${update.message}</p>
+          <p><b>${update.profileName}</b></p>
+          <div>${update.message}</div>
           <small class="text-muted">${update.updatedTime}</small>
         </div>
       </div>
@@ -63,6 +64,7 @@ const buildUpdatesList = () => {
 
   return div;
 };
+
 
 const buildSalesAnalytics = (element) => {
   const salesAnalyticsData = SALES_ANALYTICS_DATA;

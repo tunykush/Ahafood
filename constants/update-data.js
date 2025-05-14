@@ -1,20 +1,14 @@
 const UPDATE_DATA = [
   {
-    imgSrc: "./images/zzzz",
-    profileName: "zzz",
-    message: "zzzzz",
-    updatedTime: " ",
+    imgSrc: "./images/progress.png",
+    profileName: "Tuần",
+    message: `<div class="progress-bar"><div class="progress weekly-progress" style="width: 100%;"></div></div>`,
+    updatedTime: "100%"
   },
   {
-    imgSrc: "./images/zzzz",
-    profileName: "zzzz",
-    message: "zzzz",
-    updatedTime: " ",
-  },
-  {
-    imgSrc: "./images/zzzzz",
-    profileName: "zzzzz",
-    message: "zzzzz",
-    updatedTime: " ",
-  },
+    imgSrc: "./images/progress.png",
+    profileName: "Tháng",
+    message: `<div class="progress-bar"><div class="progress monthly-progress" style="width: 60%;"></div></div>`,
+    updatedTime: "60%"
+  }
 ];
