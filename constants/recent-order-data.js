@@ -1,51 +1,51 @@
 const RECENT_ORDER_DATA = [
   {
-    coin: "2.000.000",
-    total: "10",
-    price: "500",
-    growth: "100%",
-    growthColor: "success",
+    coin: "8:41",
+    total: "Điểm danh nào!",
+    price: "+20",
+    growth: "",
+    growthColor: ""
   },
   {
-    coin: "3.000.000",
-    total: "0.00",
-    price: "$594.50",
-    growth: "50%",
-    growthColor: "warning",
+    coin: "9:12",
+    total: "Đơn hàng thành công",
+    price: "+100",
+    growth: "",
+    growthColor: ""
   },
   {
-    coin: "zzzz",
-    total: "zzzz",
-    price: "zzzzzz",
-    growth: "zzzzz",
-    growthColor: "aaa",
+    coin: "9:45",
+    total: "Đơn hàng thành công",
+    price: "+100",
+    growth: "",
+    growthColor: ""
   },
   {
-    coin: "aaa",
-    total: "0aaaa",
-    price: "aaaa3949",
-    growth: "aaaa00%",
-    growthColor: "success",
+    coin: "9:46",
+    total: "Đơn hàng thành công",
+    price: "+100",
+    growth: "",
+    growthColor: ""
   },
   {
-    coin: "DOGE",
-    total: "0.00",
-    price: "$0.12688",
-    growth: "-0.02%",
-    growthColor: "danger",
+    coin: "11:24",
+    total: "Hoàn thành thử thách tuần",
+    price: "+3000",
+    growth: "",
+    growthColor: ""
   },
   {
-    coin: "SOL",
-    total: "0.00",
-    price: "$155.26",
-    growth: "+10.00%",
-    growthColor: "success",
+    coin: "14:01",
+    total: "Giới thiệu merchant mới",
+    price: "+1000",
+    growth: "",
+    growthColor: ""
   },
   {
-    coin: "SHIB",
-    total: "0.00",
-    price: "$0.00001894",
-    growth: "0.00%",
-    growthColor: "info-dark",
-  },
+    coin: "",
+    total: "Total",
+    price: "4320",
+    growth: "",
+    growthColor: ""
+  }
 ];
