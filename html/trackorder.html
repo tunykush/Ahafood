@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Quản lý Đơn hàng Thông minh</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/trackorder.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside>
+        <div class="top">
+            <div class="logo">
+                <img src="/images/ahalogo.png" alt="Logo" />
+                <h2>
+                    Aha<span style="color: #ff7f32;">Food</span><span style="color: #ff7f32; font-size: 0.5em; vertical-align: super;">.ai</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <a href="/index.html">
+                <span class="material-icons-sharp">dashboard</span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="./html/personal.html">
+                <span class="material-icons-sharp">person_outline</span>
+                <h3>Personal</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">smart_toy</span>
+                <h3>Chatbot training</h3>
+            </a>
+            <a href="trackorder.html" class="active">
+                <span class="material-icons-sharp">local_shipping</span>
+                <h3>Track Order</h3>
+                <span class="dashboard-badge">26</span>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">campaign</span>
+                <h3>Marketing</h3>
+            </a>
+            <a href="./html/pricingtable.html">
+                <span class="material-icons-sharp">request_quote</span>
+                <h3>Pricing Table</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">settings</span>
+                <h3>Settings</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">add</span>
+                <h3>Add Product</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="track-main">
+        <h2>Bản đồ Vị trí Shipper</h2>
+        <div id="map"></div>
+
+        <h2>Bảng Theo Dõi Đơn Hàng</h2>
+        <table id="orderTable">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã đơn</th>
+                    <th>Món ăn</th>
+                    <th>Số lượng</th>
+                    <th>Shipper</th>
+                    <th>Khoảng cách (km)</th>
+                    <th>Thời gian đặt</th>
+                    <th>Dự kiến đến</th>
+                    <th>Tình trạng</th>
+                    <th>Xác nhận</th>
+                </tr>
+            </thead>
+            <tbody id="orderBody"></tbody>
+        </table>
+    </main>
+
+    <script src="/trackorder.js"></script>
+</body>
+</html>
