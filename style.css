@@ -4,9 +4,9 @@
 /* ROOT VARIABLES */
 :root {
   --color-primary: #ff7f32;
-  --color-danger: #ff7782;
-  --color-success: #41f1b6;
-  --color-warning: #ffbb55;
+  --color-danger: #ff7f32;
+  --color-success: #ff7f32;
+  --color-warning: #ff7f32;
   --color-white: #fff;
   --color-info-dark: #7d8da1;
   --color-info-light: #dce1eb;
