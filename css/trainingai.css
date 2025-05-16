@@ -104,3 +104,116 @@ h1 {
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        /* Scroll for the chat training table only */
+.table-container {
+    max-height: 70vh; /* Adjust height as needed */
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+/* Custom Scrollbar */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #ff7f32;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #e56e29;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+    border-radius: 4px;
+}
+
+/* Table Styling */
+.chat-training-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.chat-training-table th, .chat-training-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+.chat-training-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Alternating Row Colors */
+.chat-training-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.chat-training-table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+/* Fix dropdown overflow */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    z-index: 1000; /* Ensures the dropdown is on top */
+}
+
+.dropdown button {
+    background-color: #ff7f32;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown button:hover {
+    background-color: #e56e29;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensures the dropdown is on top */
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+        
