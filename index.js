@@ -30,7 +30,7 @@ const buildTableBody = () => {
         <td>${row.total}</td>
         <td>${row.price}</td>
         <td class="${row.growthColor}">${row.growth}</td>
-        <td class="primary">Details</td>
+        <td class="primary">Claim</td>
       </tr>
     `;
   }

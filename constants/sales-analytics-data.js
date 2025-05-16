@@ -1,23 +1,23 @@
 const SALES_ANALYTICS_DATA = [
   {
-    icon: "./images/zzzz",
-    name: "zzzz",
-    colorClass: "zzz",
-    percentage: "zzzz",
-    price: "zzz",
+    icon: "./images/coin.png",
+    name: "+ 1 đơn hàng thành công",
+    colorClass: "green",
+    percentage: "+ 100 coins",
+    price: ""
   },
   {
-    icon: "./images/zzzz",
-    name: "zzzz",
-    colorClass: "zzzz",
-    percentage: "zzzzz",
-    price: "zzzz",
+    icon: "./images/coin.png",
+    name: "+ 1 đơn hàng thành công",
+    colorClass: "green",
+    percentage: "+ 100 coins",
+    price: ""
   },
   {
-    icon: "./images/zzz",
-    name: "zzzz",
-    colorClass: "dzzzz",
-    percentage: "zzzz",
-    price: "zzzz",
-  },
+    icon: "./images/coin.png",
+    name: "+ 1 đơn hàng thành công",
+    colorClass: "green",
+    percentage: "+ 100 coins",
+    price: ""
+  }
 ];

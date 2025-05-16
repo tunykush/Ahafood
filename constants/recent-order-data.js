@@ -1,50 +1,43 @@
 const RECENT_ORDER_DATA = [
   {
-    coin: "8:41",
-    total: "Điểm danh nào!",
-    price: "+20",
+    coin: "500 coins",
+    total: "Voucher Freeship 30,000 VND - Gói 10 vouchers",
+    price: "Miễn phí vận chuyển cho khách hàng, tăng khả năng đặt đơn.",
     growth: "",
     growthColor: ""
   },
   {
-    coin: "9:12",
-    total: "Đơn hàng thành công",
-    price: "+100",
+    coin: "1,000 coins",
+    total: "Voucher Giảm Giá 10% Món Ăn - Gói 20 vouchers",
+    price: "Giúp khách hàng tiết kiệm, kích thích mua nhiều hơn.",
     growth: "",
     growthColor: ""
   },
   {
-    coin: "9:45",
-    total: "Đơn hàng thành công",
-    price: "+100",
+    coin: "1,500 coins",
+    total: "Voucher Giảm Giá 15% Món Ăn - Gói 20 vouchers",
+    price: "Ưu đãi hấp dẫn hơn, tăng sức cạnh tranh của quán.",
     growth: "",
     growthColor: ""
   },
   {
-    coin: "9:46",
-    total: "Đơn hàng thành công",
-    price: "+100",
+    coin: "2,000 coins",
+    total: "Buổi Coaching Tư Vấn Chatbot 1:1 - 1 buổi",
+    price: "Đào tạo cá nhân giúp tối ưu vận hành chatbot và tăng doanh thu.",
     growth: "",
     growthColor: ""
   },
   {
-    coin: "11:24",
-    total: "Hoàn thành thử thách tuần",
-    price: "+3000",
+    coin: "3,000 coins",
+    total: "Voucher Combo Ưu Đãi - Gói giảm giá 20 lần mua combo",
+    price: "Combo món ăn giảm giá, thu hút khách hàng mua nhiều món hơn.",
     growth: "",
     growthColor: ""
   },
   {
-    coin: "14:01",
-    total: "Giới thiệu merchant mới",
-    price: "+1000",
-    growth: "",
-    growthColor: ""
-  },
-  {
-    coin: "",
-    total: "Total",
-    price: "4320",
+    coin: "5,000 coins",
+    total: "Voucher Quà Tặng Doanh Nghiệp - Gói 50 e-voucher đa năng",
+    price: "Quà tặng dành cho nhân viên hoặc tri ân khách thân thiết.",
     growth: "",
     growthColor: ""
   }
