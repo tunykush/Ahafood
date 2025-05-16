@@ -178,13 +178,61 @@ function removeTypingIndicator(chatBody) {
 }
 
 function generateBotResponse(message) {
-  // Custom bot responses
-  const normalizedMessage = message.toLowerCase();
-  if (normalizedMessage === "reported pls" || normalizedMessage === "overview" || normalizedMessage === "data pls" ) {
-    return `Minh, I’ve just completed the food ordering performance review for this month:\n\nOrder: 15\n\nRevenue: 1.914.000\n\nCoin: 115 coins\n\nLevel: Silver\n\nCurrent Position: You're at the bottom of the leaderboard this month.\n\nDon’t worry, we’ll start with small changes, and AhaFood.AI will guide you back to control! 💪`;
-  }
-  // Default response if no specific command is matched
-  return "I’m here to assist you! Please let me know how I can help.";
+    // Custom bot responses
+    const normalizedMessage = message.toLowerCase();
+    if (normalizedMessage === "reported pls" || normalizedMessage === "overview" || normalizedMessage === "data pls") {
+        const leaderboardMessage = `Minh, I’ve just completed the food ordering performance review for this month:\n\nOrder: 15\n\nRevenue: 1.914.000\n\nCoin: 115 coins\n\nLevel: Silver\n\nCurrent Position: You're at the bottom of the leaderboard this month.\n\nDon’t worry, we’ll start with small changes, and AhaFood.AI will guide you back to control! 💪`;
+        const recommendations = [
+            { text: "Quick Order Tracking", description: "Can I quickly check my current order status?" },
+            { text: "Unusual Sales This Week", description: "Is there anything unusual about this week’s sales?" },
+            { text: "Performance Review for Last Month", description: "Can you provide a performance summary for last month?" },
+            { text: "Sales Trend Analysis", description: "Can you analyze this month’s sales trends for me?" },
+            { text: "Customer Feedback Summary", description: "Can you give me a summary of customer feedback from last week?" }
+        ];
+        setTimeout(() => displayRecommendations(recommendations), 500);
+        return leaderboardMessage;
+    }
+    // Default response if no specific command is matched
+    return "I’m here to assist you! Please let me know how I can help.";
+}
+
+function displayRecommendations(recommendations) {
+    const chatBody = document.getElementById("chat-body");
+
+    const recWrapper = document.createElement("div");
+    recWrapper.className = "recommendations-wrapper";
+
+    recommendations.forEach(rec => {
+        const recCard = document.createElement("div");
+        recCard.className = "chat-message bot rec-card";
+
+        const recTitle = document.createElement("h4");
+        recTitle.className = "rec-title";
+        recTitle.textContent = rec.text;
+
+        const recDesc = document.createElement("p");
+        recDesc.className = "rec-description";
+        recDesc.textContent = rec.description;
+
+        // Apply white text for better readability
+        recTitle.style.color = "#FFFFFF";
+        recDesc.style.color = "#FFFFFF";
+
+        recCard.appendChild(recTitle);
+        recCard.appendChild(recDesc);
+        recCard.addEventListener("click", () => sendMessageFromButton(rec.description));
+
+        recWrapper.appendChild(recCard);
+    });
+
+    chatBody.appendChild(recWrapper);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function sendMessageFromButton(text) {
+    const chatInput = document.getElementById("chat-input");
+    chatInput.value = text;
+    sendMessage();
 }
 
 
