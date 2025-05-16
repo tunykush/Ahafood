@@ -54,17 +54,44 @@ function removeTypingIndicator(chatBody) {
 }
 
 function generateBotResponse(message) {
-  // Custom bot responses
+  // Normalize the message to handle variations in user input
   const normalizedMessage = message.toLowerCase();
-  if (normalizedMessage === "reported pls" || normalizedMessage === "overview" || normalizedMessage === "data pls" ) {
-    return `Minh, I’ve just completed the food ordering performance review for this month:\n\nOrder: 15\n\nRevenue: 1.914.000\n\nCoin: 115 coins\n\nLevel: Silver\n\nCurrent Position: You're at the bottom of the leaderboard this month.\n\nDon’t worry, we’ll start with small changes, and AhaFood.AI will guide you back to control! 💪`;
+
+  // Define possible status reports based on the customer feedback categories
+  const statusReports = {
+    "order status": {
+      summary: "Total orders this month: 245",
+      revenue: "Total revenue: 1,914,000 VND",
+      coins: "Coins earned: 115",
+      level: "Current level: Silver"
+    },
+    "leaderboard": {
+      summary: "Current Position: You're at the bottom of the leaderboard this month.",
+      encouragement: "Don’t worry, with small changes, you’ll bounce back! 💪"
+    },
+    "feedback summary": {
+      food_quality: "Fresh and tasty dishes, great portion size",
+      delivery_speed: "Arrived on time, packaging kept food fresh",
+      customer_service: "Friendly and helpful staff, quick response to questions",
+      order_accuracy: "Order exactly as requested, no missing items",
+      packaging: "Ensure packaging prevents damage during transit"
+    }
+  };
+
+  // Generate personalized status reports based on keywords in the message
+  for (const category in statusReports) {
+    if (normalizedMessage.includes(category)) {
+      const report = statusReports[category];
+      return Object.values(report).join("\n\n");
+    }
   }
-  // Default response if no specific command is matched
+
+  // Default fallback response if no specific command is matched
   return "I’m here to assist you! Please let me know how I can help.";
 }
 
-
 // Toggle Chatbot Animation
+
 document.addEventListener("DOMContentLoaded", () => {
   const chatbotIcon = document.getElementById("chatbot-icon");
 
