@@ -1,0 +1,56 @@
+.main-content {
+    padding: 20px;
+    margin-left: 260px; /* Offset for sidebar */
+}
+
+h1 {
+    font-size: 2em;
+    color: #ff7f32;
+    margin-bottom: 20px;
+}
+
+.chat-training-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.chat-training-table th, .chat-training-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.chat-training-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.chat-training-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.chat-training-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.status-icon {
+    color: green;
+    font-size: 1.5em;
+}
+
+.edit-icon, .delete-icon {
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.edit-icon:hover {
+    color: #4caf50;
+}
+
+.delete-icon:hover {
+    color: #f44336;
+}
+    
