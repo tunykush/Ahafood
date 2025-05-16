@@ -137,9 +137,21 @@ function confirmOrder(index) {
     order.confirmed = true;
     order.status = "CONFIRMED";
 
-    // Move the confirmed order to the second position
-    orders.splice(index, 1); // Remove the order from the current position
-    orders.splice(1, 0, order); // Insert it at the second position
+    // Separate fixed and flexible orders
+    const fixedOrders = orders.slice(0, 2);  // First two fixed orders
+    const flexibleOrders = orders.slice(2);  // Remaining orders
+
+    // Move the confirmed order to the first position of the flexible list
+    flexibleOrders.splice(flexibleOrders.indexOf(order), 1);  // Remove the order from its current position
+    flexibleOrders.unshift(order);  // Add it to the start of the flexible section
+
+    // Reorganize the full order list
+    const newOrders = [...fixedOrders, ...flexibleOrders];
+
+    // Update the main orders list
+    for (let i = 0; i < orders.length; i++) {
+        orders[i] = newOrders[i];
+    }
 
     renderTable();
 }
