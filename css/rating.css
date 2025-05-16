@@ -1,0 +1,101 @@
+/* Main Container */
+main {
+    margin-left: 260px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    overflow-y: hidden; /* Prevent main page from scrolling */
+}
+
+/* Title Styling */
+main h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+/* Scrollable Feedback Grid */
+.feedback-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 75vh;  /* Constrain the height */
+    overflow-y: auto;   /* Add scroll */
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+/* Individual Feedback Card */
+.feedback-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: calc(50% - 20px); /* 2 columns */
+}
+
+.feedback-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.feedback-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.feedback-header h2 {
+    font-size: 1.2em;
+    color: #555;
+    flex-grow: 1;
+}
+
+.feedback-header span {
+    font-size: 2em;
+    margin-left: 10px;
+}
+
+/* Priority Tag */
+.priority {
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    margin-bottom: 15px;
+}
+
+.priority-high {
+    background-color: #e74c3c;
+}
+
+.priority-medium {
+    background-color: #f39c12;
+}
+
+/* Highlighted Improvement */
+.highlight {
+    background-color: #ffff99;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-left: 5px solid #f39c12;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+    }
+
+    .feedback-card {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rating</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/rating.css" />
+    <link rel="stylesheet" href="/chatbot.css" />
+
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="/images/ahalogo.png" alt="Logo" />
+            <h2>
+              Aha<span style="color: #ff7f32;">Food</span><span style="color: #ff7f32; font-size: 0.5em; vertical-align: super;">.ai</span>
+            </h2>            
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="/index.html">
+            <span class="material-icons-sharp"> dashboard </span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="/html/personal.html">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Personal </h3>
+          </a>
+          <a href="/html/trainingai.html">
+            <span class="material-icons-sharp"> smart_toy</span>
+            <h3>Chatbot training</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> insights </span>
+            <h3>Report  </h3>
+          </a>
+          <a href="/html/trackorder.html">
+            <span class="material-icons-sharp"> local_shipping </span>
+            <h3>Track order</h3>
+            <span class="message-count">26</span>
+          </a>
+          <a href="/html/rating.html" class="active">
+            <span class="material-icons-sharp">rate_review </span>
+            <h3>Rating</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">campaign </span>
+            <h3>Marketing</h3>
+          </a>
+          <a href="./html/pricingtable.html">
+            <span class="material-icons-sharp"> request_quote </span>
+            <h3>Pricing Table</h3>
+          <a href="#">
+            <span class="material-icons-sharp"> settings </span>
+            <h3>Settings</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> add </span>
+            <h3>Add Product</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+
+            <!-- Main Content -->
+        <main>
+    <h1>Customer Feedback</h1>
+    <div class="feedback-grid">
+        <div class="feedback-card">
+            <div class="feedback-header">
+                <h2>Food Quality</h2>
+                <span>👍</span>
+            </div>
+            <div class="priority priority-medium">Medium Priority</div>
+            <div class="feedback-details">
+                <p><strong>Positive Feedback:</strong> "Fresh and tasty dishes", "Great portion size"</p>
+                <div class="highlight">Improve consistency in flavor, reduce wait time for hot dishes</div>
+            </div>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-header">
+                <h2>Delivery Speed</h2>
+                <span>👍</span>
+            </div>
+            <div class="priority priority-high">High Priority</div>
+            <div class="feedback-details">
+                <p><strong>Positive Feedback:</strong> "Arrived on time", "Packaging kept food fresh"</p>
+                <div class="highlight">Shorten delivery time, provide real-time tracking updates</div>
+            </div>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-header">
+                <h2>Customer Service</h2>
+                <span>👍</span>
+            </div>
+            <div class="priority priority-high">High Priority</div>
+            <div class="feedback-details">
+                <p><strong>Positive Feedback:</strong> "Friendly and helpful staff", "Quick response to questions"</p>
+                <div class="highlight">Train staff to handle complaints more patiently</div>
+            </div>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-header">
+                <h2>Order Accuracy</h2>
+                <span>👍</span>
+            </div>
+            <div class="priority priority-medium">Medium Priority</div>
+            <div class="feedback-details">
+                <p><strong>Positive Feedback:</strong> "Order exactly as requested", "No missing items"</p>
+                <div class="highlight">Double-check orders before dispatch</div>
+            </div>
+        </div>
+
+        <div class="feedback-card">
+            <div class="feedback-header">
+                <h2>Packaging</h2>
+                <span>👎</span>
+            </div>
+            <div class="priority priority-medium">Medium Priority</div>
+            <div class="feedback-details">
+                <p><strong>Positive Feedback:</strong> "Good packaging quality", "Food stayed intact"</p>
+                <div class="highlight">Use more eco-friendly materials, improve leak prevention</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    </div>
+        <!-- Chatbot Icon -->
+<div id="chatbot-icon" onclick="toggleChat()">
+  <img src="/images/ahagent.png" alt="Chatbot Icon" />
+  <div class="chat-tooltip">How are you, Minh ?</div>
+</div>
+
+<!-- Chatbot Popup -->
+<div id="chatbot-popup" class="chat-popup">
+  <div class="chat-header">
+    <span>Chat với Ahamove AI</span>
+    <button onclick="toggleChat()" class="close-chat">X</button>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="chat-message bot">Welcome to your rating! Here, you can see real customer insights that help you improve and grow your business. Let's make every meal memorable! 🍽️</div>
+  </div>
+  <div class="chat-footer">
+    <input type="text" id="chat-input" placeholder="Input your text..." onkeypress="handleChat(event)" />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+    <script src="/rating.js"></script>
+    <script src="/chatbot.js"></script>
+
+</body>
+</html>

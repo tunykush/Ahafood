@@ -1,0 +1,118 @@
+
+/* Chat Popup */
+.chat-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 300px;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-2);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: hidden;
+}
+.chat-popup.active {
+  display: flex;
+}
+.chat-header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-header button {
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+.chat-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: 300px;
+}
+.chat-message {
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--border-radius-2);
+  font-size: 0.88rem;
+  width: fit-content;
+  max-width: 80%;
+}
+.chat-message.bot {
+  background-color: var(--color-primary);
+  color: white;
+  align-self: flex-start;
+}
+.chat-message.user {
+  background-color: var(--color-info-light);
+  color: var(--color-dark);
+  align-self: flex-end;
+}
+.chat-footer {
+  padding: 0.8rem;
+  display: flex;
+  gap: 0.6rem;
+}
+.chat-footer input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: var(--border-radius-1);
+  border: 1px solid var(--color-light);
+}
+.chat-footer button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius-1);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Typing Indicator */
+.chat-message.typing {
+  background-color: var(--color-primary);
+  color: white;
+  width: 60px;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--border-radius-2);
+  display: flex;
+  gap: 0.3rem;
+}
+
+.chat-message.typing span {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  animation: typing 1s infinite ease-in-out;
+}
+
+.chat-message.typing span:nth-child(1) {
+  animation-delay: 0s;
+}
+.chat-message.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.chat-message.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
