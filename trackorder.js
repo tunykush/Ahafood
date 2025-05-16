@@ -1,23 +1,23 @@
 const orders = [
     {
-        code: "1111", food: "1 BEEF PIZZA", qty: 1, shipper: "Nguyen Thanh Hung",
-        distance: 2, time: "10:30", eta: "10:40", status: "CONFIRMED", confirmed: true
+        code: "1112", food: "1 Minced Beef Pizza", qty: 1, shipper: "Nguyen Thanh Hung",
+        distance: 1.0, time: "10:05", eta: "10:15", status: "CONFIRMED", confirmed: true
     },
     {
-        code: "1112", food: "1 SEAFOOD PIZZA, 4 CHICKEN WINGS", qty: 5, shipper: "Le Thanh Nhan",
-        distance: 0.5, time: "10:35", eta: "10:40", status: "CONFIRMED", confirmed: true
+        code: "1111", food: "1 Seafood Pizza, 2 Crispy Fried Chicken Wings", qty: 3, shipper: "Le Thanh Nhan",
+        distance: 1.5, time: "10:00", eta: "10:25", status: "CONFIRMED", confirmed: true
     },
     {
-        code: "1113", food: "10 CHICKEN BREASTS, 5 PIZZAS, 10 COCAS", qty: 25, shipper: "Nguyen Thu Huong",
-        distance: 5, time: "11:00", eta: "11:10", status: "PENDING", confirmed: false
+        code: "1113", food: "1 Chicken Pizza", qty: 5, shipper: "Tran Trong Nghia",
+        distance: 2.0, time: "10:10", eta: "10:40", status: "PENDING", confirmed: false
     },
     {
-        code: "1114", food: "2 CHICKEN SKINS, 3 FRENCH FRIES", qty: 5, shipper: "Nguyen Thu Huong",
-        distance: 3, time: "13:00", eta: "13:10", status: "PENDING", confirmed: false
+        code: "1115", food: "5 Mixed Pizzas, 5 Fried Chicken Wings with Fish Sauce", qty: 10, shipper: "Nguyen Thu Huong",
+        distance: 2.5, time: "10:20", eta: "10:45", status: "PENDING", confirmed: false
     },
     {
-        code: "1115", food: "1 PIZZA, 1 COCA", qty: 2, shipper: "Le Thanh Nhan",
-        distance: 7, time: "12:10", eta: "12:25", status: "PENDING", confirmed: false
+        code: "1114", food: "5 Seafood Pizzas, 10 Cokes", qty: 15, shipper: "Nguyen Minh Khoa",
+        distance: 4.0, time: "10:30", eta: "10:55", status: "PENDING", confirmed: false
     }
 ];
 
