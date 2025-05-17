@@ -131,3 +131,9 @@ th {
 
 }
 
+/* Completed Order Styles */
+.completed {
+    background-color: #e0f7fa;
+    color: #00796b;
+    font-weight: bold;
+}

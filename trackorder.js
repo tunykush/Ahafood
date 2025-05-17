@@ -27,7 +27,12 @@ function renderTable() {
     tbody.innerHTML = "";
     orders.forEach((o, i) => {
         const tr = document.createElement("tr");
-        if (o.confirmed) tr.classList.add("confirmed");
+        
+        // Phân loại trạng thái
+        if (o.status === "COMPLETED") tr.classList.add("completed");
+        else if (o.confirmed) tr.classList.add("confirmed");
+
+        // Tạo nội dung cho mỗi hàng
         tr.innerHTML = `
         <td>${i + 1}</td>
         <td>${o.code}</td>
@@ -39,15 +44,25 @@ function renderTable() {
         <td>${o.eta}</td>
         <td>${o.status}</td>
         <td>
-            ${o.confirmed ? "" : `
-                <button onclick="confirmOrder(${i})">Confirmed</button>
-                <button onclick="cannotDeliver(${i})" style="margin-top:5px; background:red;">Can not arrived</button>
+            ${o.status === "COMPLETED" ? "" : o.confirmed ? `
+                <button onclick="completeOrder(${i})" style="background: #28a745; color: white;">Completed</button>
+            ` : `
+                <button onclick="confirmOrder(${i})">Confirm</button>
+                <button onclick="cannotDeliver(${i})" style="margin-top:5px; background:red;">Cannot Arrive</button>
             `}
         </td>
         `;
         tbody.appendChild(tr);
     });
 }
+function completeOrder(index) {
+    const order = orders[index];
+    if (order.confirmed && order.status !== "COMPLETED") {
+        order.status = "COMPLETED";
+        renderTable();
+    }
+}
+
 
 function confirmOrder(index) {
     orders[index].confirmed = true;
