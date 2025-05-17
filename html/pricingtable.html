@@ -72,68 +72,137 @@
             </div>
         </aside>
 
-              <main class="pricing-section">
+                <main class="pricing-section">
+                    <!-- Modal Structure -->
+<div id="premium-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Premium Package Insurance Policy</h2>
+        <p>AhaFood.AI is committed to comprehensive support and protecting the interests of restaurants using the Premium package when revenue significantly declines. This transparent and fair policy helps you grow your business sustainably.</p>
+
+        <h3>1. Eligibility</h3>
+        <p>Available for restaurants using the Premium package with at least 4 months of continuous activity on the AhaFood.AI platform.</p>
+
+        <h3>2. Insurance Period</h3>
+        <ul>
+            <li>6-month Premium package: 1 month insurance coverage</li>
+            <li>12-month Premium package: 3 months insurance coverage</li>
+        </ul>
+
+        <h3>3. Activation Criteria</h3>
+        <ul>
+            <li>Revenue drops to 50%-75% of the 3-month average: Top 5 placement, 5 social media posts, 5 ad campaigns, and discount vouchers.</li>
+            <li>Revenue drops to 20%-50% of the 3-month average: Top 3 placement, 10 social media posts, 7 ad campaigns, and free shipping vouchers.</li>
+            <li>Revenue drops below 20% of the 3-month average: Top 1 placement, 20 multi-platform posts, 10 ad campaigns, and 100% free shipping.</li>
+        </ul>
+
+        <h3>4. Implementation Process</h3>
+        <ul>
+            <li>Insurance activates after 3 months of consecutive revenue drop.</li>
+            <li>Support continues until revenue recovers or insurance period ends.</li>
+            <li>Automatic suspension when revenue stabilizes.</li>
+        </ul>
+
+        <h3>5. Conditions and Limitations</h3>
+        <ul>
+            <li>Applies to restaurants with clear data and valid contracts.</li>
+            <li>Coverage may be suspended for violations or fraud.</li>
+            <li>Disputes resolved according to the contract.</li>
+        </ul>
+
+        <h3>6. Our Commitment</h3>
+        <ul>
+            <li>Timely, transparent, and professional support.</li>
+            <li>Regular reports on revenue and insurance status.</li>
+            <li>Always supporting restaurants through challenging times.</li>
+        </ul>
+
+        <button class="cta" onclick="closeModal()">Close</button>
+    </div>
+</div>
+
     <h1>Service Pricing</h1>
-    <p>Choose the right service package for your restaurant's growth.</p>
-    <div class="pricing-container">
-        <!-- Standard Plan -->
-        <div class="pricing-card basic">
-            <div class="plan-header">
-                <span class="highlight">STANDARD</span>
-                <h2>For Small and Medium-Sized Restaurants</h2>
-                <p>1 account for easy management</p>
-            </div>
-            <ul>
-                <li>Detailed sales reports</li>
-                <li>Top-selling dish analysis</li>
-                <li>Customer feedback collection</li>
-                <li>Accurate order tracking</li>
-                <li>Intelligent order alert system</li>
-                <li>AI auto-reply (limited to 5 messages)</li>
-                <li>50 AI training prompts/questions</li>
-                <li>Multilingual support</li>
-            </ul>
-            <button class="cta">Choose this plan</button>
+<p>Choose the right plan for your restaurant's growth.</p>
+<div class="pricing-container">
+    <!-- Standard Plan -->
+    <div class="pricing-card basic">
+        <div class="plan-header">
+            <span class="highlight">STANDARD</span>
+            <h2>For Small and Medium Restaurants</h2>
+            <p>1 Access Account</p>
         </div>
+        <ul>
+            <li>Detailed Sales Reports</li>
+            <li>Top-Selling Dish Analysis</li>
+            <li>Customer Feedback Collection</li>
+            <li>Accurate Order Tracking</li>
+            <li>Smart Alert System</li>
+            <li>AI Auto-Response (5 messages limit)</li>
+            <li>50 AI Training Prompts</li>
+            <li>Multi-language Support</li>
+        </ul>
+        <button class="cta">Choose this Plan</button>
+    </div>
+
 
         <!-- Plus Plan -->
         <div class="pricing-card professional">
-            <div class="plan-header">
-                <span class="highlight">PLUS</span>
-                <h2>Optimal Choice for Growing Restaurants</h2>
-                <p>3 accounts for group management</p>
-            </div>
-            <ul>
-                <li>All features of the Standard plan</li>
-                <li>Personalized reports based on real data</li>
-                <li>Advanced review processing and analysis</li>
-                <li>Enhanced AI (limited to 10 messages)</li>
-                <li>50 standard prompts + 20 custom prompts</li>
-                <li>AI remembers customer personas</li>
-            </ul>
-            <button class="cta">Choose this plan</button>
-        </div>
+    <div class="plan-header">
+        <span class="highlight">PLUS</span>
+        <h2>Ideal for Growing Restaurants</h2>
+        <p>3 Access Accounts</p>
+    </div>
+    <ul>
+        <li>All Features of Standard Plan</li>
+        <li>Personalized Reports from Real Data</li>
+        <li>Advanced Review Analysis</li>
+        <li>Enhanced AI (10 messages limit)</li>
+        <li>50 Standard Prompts + 20 Custom Prompts</li>
+        <li>AI Customer Persona Memory</li>
+    </ul>
+    <button class="cta">Choose this Plan</button>
+</div>
 
         <!-- Premium Plan -->
-        <div class="pricing-card advanced">
-            <div class="plan-header">
-                <span class="highlight">PREMIUM</span>
-                <h2>Comprehensive Solution for Large Restaurants</h2>
-                <p>5 accounts for multi-branch management</p>
-            </div>
-            <ul>
-                <li>All features of the Plus plan</li>
-                <li>Complete analytics with detailed strategy insights</li>
-                <li>Unlimited AI responses</li>
-                <li>Customizable restaurant vibe support</li>
-                <li>100 standard prompts + 50 custom prompts</li>
-                <li>Deep AI understanding with keyword matching</li>
-            </ul>
-            <button class="cta">Choose this plan</button>
-        </div>
+  
+<div class="pricing-card advanced">
+    <div class="plan-header">
+        <span class="highlight">PREMIUM</span>
+        <h2>Comprehensive Solution for Large Restaurants</h2>
+        <p>5 accounts for multi-branch management</p>
+    </div>
+    <ul>
+        <li>All features of the Plus plan</li>
+        <li>Complete analytics with detailed strategy insights</li>
+        <li>Unlimited AI responses</li>
+        <li>Customizable restaurant vibe support</li>
+        <li>100 standard prompts + 50 custom prompts</li>
+        <li>Deep AI understanding with keyword matching</li>
+    </ul>
+    <button class="cta" onclick="openModal()">Learn More</button>
+</div>
+
     </div>
 </main>
     </div>
+    <script>
+function openModal() {
+    document.getElementById("premium-modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("premium-modal").style.display = "none";
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById("premium-modal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
 </body>
 </html>
 
