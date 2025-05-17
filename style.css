@@ -856,3 +856,20 @@ main .holding a {
 }
 
 
+/* Profile Rank Styles */
+.profile .info .rank {
+    background-color: #cd7f32; /* Bronze Color */
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--border-radius-1);
+    font-size: 0.75rem;
+    margin-top: 0.4rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Bronze Text Color */
+.text-muted.bronze-user {
+    color: #cd7f32 !important;
+}
