@@ -1,0 +1,125 @@
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Section Styling */
+section.insights {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+section.holding {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Text Containers */
+.text-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Headers */
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Muted Text */
+.text-muted {
+    color: #777;
+    font-style: italic;
+}
+
+/* Chart Containers */
+.chart-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Price Perception Chart */
+#pricePerceptionChart {
+    height: 350px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px 15px;
+    background-color: #ff7f32;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: #e66423;
+}
+
+/* Hide sections by default */
+.filter-section {
+    display: none;
+}
+
+/* Show active section */
+.filter-section.active {
+    display: grid;
+}
+
+/* Hide sections by default */
+.filter-section {
+    display: none;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Show active section */
+.filter-section.active {
+    display: grid;
+}
+
+/* Hide all sections by default */
+.filter-section {
+    display: none;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Show active section */
+.filter-section.active {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}

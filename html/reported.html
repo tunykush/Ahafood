@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <link rel="icon" href="/images/ahalogo.png" type="image/png" />
+    <link rel="shortcut icon" href="/images/ahalogo.png" type="image/png" />
+    
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix"></script>
+
+
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/reported.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="/images/ahalogo.png" alt="Logo" />
+            <h2>
+              Aha<span style="color: #ff7f32;">Food</span><span style="color: #ff7f32; font-size: 0.5em; vertical-align: super;">.ai</span>
+            </h2>            
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="/index.html">
+            <span class="material-icons-sharp"> dashboard </span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="./html/personal.html">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Personal </h3>
+          </a>
+          <a href="./html/trainingai.html">
+            <span class="material-icons-sharp"> smart_toy</span>
+            <h3>Chatbot training</h3>
+          </a>
+          <a href="./reported.html"class="active">
+            <span class="material-icons-sharp"> insights </span>
+            <h3>Report  </h3>
+          </a>
+          <a href="./html/trackorder.html">
+            <span class="material-icons-sharp"> local_shipping </span>
+            <h3>Track order</h3>
+            <span class="message-count">26</span>
+          </a>
+          <a href="./html/rating.html">
+            <span class="material-icons-sharp">rate_review </span>
+            <h3>Rating</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">campaign </span>
+            <h3>Marketing</h3>
+          </a>
+          <a href="./html/pricingtable.html">
+            <span class="material-icons-sharp"> request_quote </span>
+            <h3>Pricing Table</h3>
+          <a href="#">
+            <span class="material-icons-sharp"> settings </span>
+            <h3>Settings</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> add </span>
+            <h3>Add Product</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+
+      <main>
+    <h1>📊 AI Dashboard Report</h1>
+
+    <!-- Dropdown Menu for Sections -->
+<!-- Dropdown Menu for Sections -->
+<div class="dropdown">
+    <select onchange="showSection(this.value)">
+        <option value="menu">Best-Selling Menu Items</option>
+        <option value="revenue">Revenue Growth</option>
+        <option value="ranking">Ranking Insight</option>
+        <option value="market">Peach Tea Market</option>
+        <option value="performance">Revenue Performance</option>
+    </select>
+</div>
+
+<!-- Best-Selling Menu Items -->
+<section class="insights filter-section" id="menu">
+    <div class="chart-container">
+        <canvas id="menuChart"></canvas>
+    </div>
+    <div class="text-container">
+        <h2>Best-Selling Menu Items</h2>
+        <p>🥇 Milk Tea – 40%<br>🥈 Matcha Latte – 38%<br>🥉 Peach Tea – 22%</p>
+        <p class="text-muted">✨ <b>AI Take:</b> Your customers love creamy flavors! Double down on Milk Tea + Matcha combos for maximum impact. 🚀</p>
+    </div>
+</section>
+
+<!-- Revenue Growth -->
+<section class="insights filter-section" id="revenue">
+    <div class="chart-container">
+        <canvas id="revenueChart"></canvas>
+    </div>
+    <div class="text-container">
+        <h2>Revenue Growth</h2>
+        <p>💰 This Month: 160,000,000 VND<br>📊 Last Month: 75,000,000 VND<br>📈 Growth: +113%</p>
+        <p class="text-muted">👏 You're scaling fast! Use this momentum to test promos and boost customer loyalty. 💥</p>
+    </div>
+</section>
+
+<!-- Ranking -->
+<section class="insights filter-section" id="ranking">
+    <div class="chart-container">
+        <canvas id="rankingChart"></canvas>
+    </div>
+    <div class="text-container">
+        <h2>Ranking Insight</h2>
+        <p>📊 Currently ranked #14 in your segment.<br>🔼 You're close to breaking into the top 10! Focus on customer reviews and promotions for a boost.</p>
+        <p class="text-muted">🔼 Use peak hours and eye-catching visuals to climb the ranks! 🚀</p>
+    </div>
+</section>
+
+<!-- Peach Tea Market Positioning -->
+<section class="holding filter-section" id="market">
+    <div class="text-container">
+        <h2>🍑 Peach Tea Market Positioning</h2>
+        <p>Current Price: 45,000 VND</p>
+        <p>👉 Great mid-range performance. Consider:<br>
+            - Launching a "Golden Peach" version<br>
+            - Adding toppings (jelly, syrup) for +5–10K<br>
+            - Creating combo sets (~59K)
+        </p>
+    </div>
+    <div class="chart-container">
+        <canvas id="pricePerceptionChart"></canvas>
+    </div>
+</section>
+
+<!-- Revenue Performance -->
+<section class="insights filter-section" id="performance">
+    <div class="chart-container">
+        <canvas id="revenuePerformanceHeatmap"></canvas>
+    </div>
+    <div class="text-container">
+        <h2>Revenue Performance</h2>
+        <p>📊 Your Revenue vs. the Market (Small & Medium Merchants)</p>
+        <p>Right now, your revenue is sitting right around the market average — and that’s not a bad thing at all!</p>
+        <p>It means you’ve already built a solid foundation — you’re not falling behind, and you’re not struggling. You’re exactly where many merchants are trying to get to. But here’s the exciting part: you're also in the perfect position to grow. 💡</p>
+    </div>
+</section>
+
+
+    </section>
+</main>
+
+
+
+  <script src="/reported.js"></script>
+</body>
+</html>
