@@ -45,22 +45,21 @@ function renderTable() {
         <td>${o.status}</td>
         <td>
             ${o.status === "COMPLETED" ? "" : o.confirmed ? `
-                <button onclick="completeOrder(${i})" style="background: #28a745; color: white;">Completed</button>
+                <button class="completed-btn" onclick="completeOrder(${i})">
+                    <i class="material-icons-sharp">check_circle</i> Completed
+                </button>
             ` : `
-                <button onclick="confirmOrder(${i})">Confirm</button>
-                <button onclick="cannotDeliver(${i})" style="margin-top:5px; background:red;">Cannot Arrive</button>
+                <button class="confirm-btn" onclick="confirmOrder(${i})">
+                    <i class="material-icons-sharp">done</i> Confirm
+                </button>
+                <button class="cannot-arrive-btn" onclick="cannotDeliver(${i})">
+                    <i class="material-icons-sharp">block</i> Cannot Arrive
+                </button>
             `}
         </td>
         `;
         tbody.appendChild(tr);
     });
-}
-function completeOrder(index) {
-    const order = orders[index];
-    if (order.confirmed && order.status !== "COMPLETED") {
-        order.status = "COMPLETED";
-        renderTable();
-    }
 }
 
 
@@ -171,3 +170,42 @@ function confirmOrder(index) {
     renderTable();
 }
 
+
+function completeOrder(index) {
+    const order = orders[index];
+    if (order.confirmed && order.status !== "COMPLETED") {
+        order.status = "COMPLETED";
+        renderTable(); // Cập nhật lại bảng
+
+        // Hiển thị popup coin
+        showCoinPopup();
+    }
+}
+
+function showCoinPopup() {
+    // Tạo phần tử popup
+    const popup = document.createElement("div");
+    popup.classList.add("coin-popup");
+    popup.innerHTML = `
+        <div class="popup-content">
+            <img src="/images/coinpopup.png" alt="coin" class="coin-img" />
+            <span>+100 Coins</span>
+            <button onclick="closeCoinPopup()">OK</button>
+        </div>
+    `;
+    
+    // Thêm popup vào trang
+    document.body.appendChild(popup);
+
+    // Hiệu ứng hiện popup
+    setTimeout(() => popup.classList.add("show"), 10);
+}
+
+function closeCoinPopup() {
+    const popup = document.querySelector(".coin-popup");
+    if (popup) {
+        // Hiệu ứng ẩn popup
+        popup.classList.remove("show");
+        setTimeout(() => popup.remove(), 300);
+    }
+}
