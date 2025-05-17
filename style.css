@@ -832,5 +832,27 @@ main .holding a {
   background: #ccc;
 }
 
+/* Detailed Button Styles */
+.details-btn {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--border-radius-1);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    margin-top: 0.8rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.details-btn:hover {
+    background-color: var(--color-primary-variant);
+    color: var(--color-white);
+    transform: scale(1.05);
+}
 
 
