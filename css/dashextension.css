@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background-color: #FF6D00;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(255, 109, 0, 0.2);
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: #e65c00;
+    box-shadow: 0 15px 30px rgba(255, 109, 0, 0.4);
+}
+
+h1, h2 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+table th, table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #555;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f7f7f7;
+}
+
+table tr:hover td {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+.claim-button {
+    background-color: #00bcd4;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 188, 212, 0.2);
+}
+
+.claim-button:hover {
+    background-color: #0097a7;
+    box-shadow: 0 15px 30px rgba(0, 188, 212, 0.4);
+}
+
+/* History Section Styles */
+.history-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-section ul li {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border-left: 5px solid #FF6D00;
+    color: #555555;
+    box-shadow: 0 10px 20px rgba(255, 109, 0, 0.15);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-section ul li:hover {
+    border-left-color: #e65c00;
+    box-shadow: 0 20px 40px rgba(255, 109, 0, 0.3);
+}
+
+/* Progress Bar Styles */
+.challenge-section {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    margin-bottom: 15px;
+}
+
+.progress-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.progress-label span {
+    margin-right: 8px;
+}
+
+.progress-question {
+    background-color: #e0e0e0;
+    color: #555;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 20px;
+    margin: 5px 0 10px 0;
+}
+
+.progress-fill {
+    background-color: #d98035;
+    height: 100%;
+    border-radius: 30px;
+    transition: width 0.5s ease-in-out;
+}
