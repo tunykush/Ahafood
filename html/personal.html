@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="/css/personal.css">
+   <link rel="stylesheet" href="/chatbot.css">
   <link rel="icon" href="./images/ahalogo.png" type="image/png" />
   <link rel="shortcut icon" href="/images/ahalogo.png" type="image/png" />
 
@@ -123,8 +124,30 @@
     </main>
 
   </div>
+   <!-- Chatbot Icon -->
+<div id="chatbot-icon" onclick="toggleChat()">
+  <img src="/images/ahagent.png" alt="Chatbot Icon" />
+  <div class="chat-tooltip">How are you, Minh ?</div>
+</div>
 
+<!-- Chatbot Popup -->
+<div id="chatbot-popup" class="chat-popup">
+  <div class="chat-header">
+    <span>Chat với Ahamove AI</span>
+    <button onclick="toggleChat()" class="close-chat">X</button>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="chat-message bot">"Welcome to your personal settings! 🚀 Keep your profile updated to get the most out of our platform. Just let me know if you need a hand. 👍"</div>
+  </div>
+  <div class="chat-footer">
+    <input type="text" id="chat-input" placeholder="Input your text..." onkeypress="handleChat(event)" />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+    
+    <script src="/chatbot.js"></script>
   <script src="./index.js"></script>
+
   
 </body>
 </html>
