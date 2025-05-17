@@ -1,0 +1,285 @@
+/* Pricing Image Styles */
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+
+.pricing-image {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.premium-upgrade-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.premium-upgrade-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Premium Popup Styles */
+.premium-popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    padding-top: 60px;
+}
+
+.premium-popup-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+/* Premium Section Styles */
+.premium-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-title {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.premium-subtitle {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Image Styles */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pricing-image, .minimal-pricing-image {
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+    border-radius: 0; /* Bỏ viền bo tròn */
+    box-shadow: none; /* Bỏ hiệu ứng đổ bóng */
+    transition: none; /* Tắt hiệu ứng hover */
+}
+
+
+/* Button Styles */
+.premium-upgrade-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.premium-upgrade-btn:hover {
+    background-color: #0b0b0b;
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.4);
+}
+/* Minimal Premium Section */
+.minimal-premium-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.minimal-title {
+    font-size: 3em;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.minimal-subtitle {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Image Styles */
+.minimal-pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.minimal-pricing-image {
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.minimal-pricing-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.minimal-upgrade-btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Helvetica Neue", sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.minimal-upgrade-btn:hover {
+    background-color: #222222;
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+/* Purchase Popup Styles */
+.purchase-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Centered Popup Content */
+.purchase-popup-content {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Popup Text */
+.purchase-popup h2 {
+    color: #000;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.purchase-popup p {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Purchase Button */
+.purchase-btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+}
+
+.purchase-btn:hover {
+    background-color: #222222;
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
