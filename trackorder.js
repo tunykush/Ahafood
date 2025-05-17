@@ -209,3 +209,4 @@ function closeCoinPopup() {
         setTimeout(() => popup.remove(), 300);
     }
 }
+
