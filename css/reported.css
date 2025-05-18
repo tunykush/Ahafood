@@ -1,125 +1,163 @@
-
-
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+/* 🌟 Container Chính */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
-/* Main Content */
+/* 🌟 Sidebar */
+aside {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* 🌟 Main Content */
 main {
+    margin-left: 250px;  /* 🔥 Trừ chiều rộng của sidebar */
+    flex-grow: 1;
+    padding: 60px 40px;  /* 🔥 Thêm khoảng trống trên và hai bên */
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    overflow: auto;
+}
+
+/* 🌟 Chart Section */
+.chart-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
     padding: 20px;
     background-color: #ffffff;
-    min-height: 100vh;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
 }
 
-/* Section Styling */
-section.insights {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    margin-bottom: 30px;
+/* 🌟 Show Active Section */
+.chart-section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-section.holding {
-    margin-bottom: 30px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* Text Containers */
-.text-container {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* Headers */
-h2 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-}
-
-/* Muted Text */
-.text-muted {
-    color: #777;
-    font-style: italic;
-}
-
-/* Chart Containers */
+/* 🌟 Chart Container */
 .chart-container {
-    background-color: #ffffff;
+    width: 100%;
+    padding: 20px;
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 500px !important;
+    max-width: 100% !important;
+    max-height: 500px !important;
+}
+
+/* 🌟 Text Container */
+.text-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* 🌟 Dropdown */
+.dropdown {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown select {
+    width: 300px;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ddd;
+    font-size: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-/* Price Perception Chart */
-#pricePerceptionChart {
-    height: 350px;
-}
-
-/* Filter Buttons */
-.filter-buttons {
+/* 🌟 Main Section Fix */
+main {
+    margin-left: 250px;
+    flex-grow: 1;
+    padding: 60px 40px 150px 40px;  /* 🔥 Khoảng trống dưới */
+    min-height: calc(100vh - 80px);  /* 🔥 Đảm bảo không dính lên trên */
+    background-color: #f9f9f9;
+    overflow: auto;
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.filter-buttons button {
-    padding: 10px 15px;
-    background-color: #ff7f32;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
+/* 🌟 Chart Section Fix */
+.chart-section {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
 }
 
-.filter-buttons button:hover {
-    background-color: #e66423;
+/* 🌟 Show Active Section */
+.chart-section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Hide sections by default */
-.filter-section {
-    display: none;
+/* 🌟 Fix Chart Size */
+.chart-container {
+    width: 100%;
+    padding: 20px;
 }
 
-/* Show active section */
-.filter-section.active {
-    display: grid;
+.chart-container canvas {
+    width: 100% !important;
+    height: 500px !important;
+    max-width: 100% !important;
+    max-height: 500px !important;
 }
 
-/* Hide sections by default */
-.filter-section {
-    display: none;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    margin-bottom: 30px;
+/* 🌟 Responsive Cho Mobile */
+@media (max-width: 768px) {
+    aside {
+        width: 100%;
+        position: relative;
+        min-height: auto;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .chart-section,
+    .text-container {
+        max-width: 95%;
+    }
 }
 
-/* Show active section */
-.filter-section.active {
-    display: grid;
-}
-
-/* Hide all sections by default */
-.filter-section {
-    display: none;
-    margin-bottom: 30px;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Show active section */
-.filter-section.active {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-}

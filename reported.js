@@ -1,4 +1,25 @@
-// Chart.js - Best-Selling Menu Items (Pie Chart)
+// Khôi phục trạng thái khi tải lại trang
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const chartId = params.get('chart') || 'menu';
+    document.getElementById('chart-dropdown').value = chartId;
+    navigateToChart(chartId);
+});
+
+// Chuyển đổi giữa các biểu đồ
+function navigateToChart(chartId) {
+    // Ẩn tất cả các section
+    document.querySelectorAll('.chart-section').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Hiển thị section được chọn
+    if (chartId) {
+        document.getElementById(chartId).style.display = 'block';
+    }
+}
+
+// 🥧 Best-Selling Menu Items (Pie Chart)
 new Chart(document.getElementById('menuChart'), {
     type: 'pie',
     data: {
@@ -12,6 +33,7 @@ new Chart(document.getElementById('menuChart'), {
     },
     options: {
         responsive: true,
+        maintainAspectRatio: false,  // 🔥 Fix kích thước
         plugins: {
             legend: { position: 'bottom' },
             tooltip: {
@@ -23,7 +45,7 @@ new Chart(document.getElementById('menuChart'), {
     }
 });
 
-// Chart.js - Revenue Growth (Line Chart)
+// 📈 Revenue Growth (Line Chart)
 new Chart(document.getElementById('revenueChart'), {
     type: 'line',
     data: {
@@ -39,6 +61,7 @@ new Chart(document.getElementById('revenueChart'), {
     },
     options: {
         responsive: true,
+        maintainAspectRatio: false,  // 🔥 Fix kích thước
         scales: {
             y: {
                 beginAtZero: true,
@@ -50,23 +73,20 @@ new Chart(document.getElementById('revenueChart'), {
     }
 });
 
-// Chart.js - Ranking (Horizontal Bar Chart)
+// 🏆 Ranking Insight (Horizontal Bar Chart)
 new Chart(document.getElementById('rankingChart'), {
     type: 'bar',
     data: {
         labels: ['#11', '#12', '#13', '👑 You (#14)', '#15', '#16', '#17'],
         datasets: [{
             data: [180, 165, 150, 140, 120, 100, 90],
-            backgroundColor: [
-                '#c2c2c2', '#c2c2c2', '#c2c2c2',
-                '#FF7F32', 
-                '#e0e0e0', '#e0e0e0', '#e0e0e0'
-            ]
+            backgroundColor: ['#c2c2c2', '#c2c2c2', '#c2c2c2', '#FF7F32', '#e0e0e0', '#e0e0e0', '#e0e0e0']
         }]
     },
     options: {
-        indexAxis: 'y',
         responsive: true,
+        maintainAspectRatio: false,  // 🔥 Fix kích thước
+        indexAxis: 'y',
         scales: {
             x: {
                 beginAtZero: true,
@@ -86,8 +106,7 @@ new Chart(document.getElementById('rankingChart'), {
     }
 });
 
-
-// Chart.js - Price Perception Map
+// 🍑 Price Perception Map (Bubble Chart)
 new Chart(document.getElementById('pricePerceptionChart'), {
     type: 'bubble',
     data: {
@@ -113,47 +132,26 @@ new Chart(document.getElementById('pricePerceptionChart'), {
     },
     options: {
         responsive: true,
+        maintainAspectRatio: false,  // 🔥 Fix kích thước
         scales: {
             x: {
-                title: {
-                    display: true,
-                    text: 'Price'
-                },
+                title: { display: true, text: 'Price' },
                 min: 20,
-                max: 80,
-                grid: {
-                    color: 'rgba(0,0,0,0.05)'
-                }
+                max: 80
             },
             y: {
-                title: {
-                    display: true,
-                    text: 'Units Sold'
-                },
+                title: { display: true, text: 'Units Sold' },
                 min: 0,
-                max: 100,
-                grid: {
-                    color: 'rgba(0,0,0,0.05)'
-                }
+                max: 100
             }
         },
         plugins: {
-            tooltip: {
-                callbacks: {
-                    label: context => 
-                        context.dataset.label === 'You'
-                        ? 'Me (Peach Tea)'
-                        : 'Opponent Average'
-                }
-            },
-            legend: {
-                position: 'bottom'
-            }
+            legend: { position: 'bottom' }
         }
     }
 });
 
-// Gradient Heatmap for Revenue Performance
+// 💡 Revenue Performance (Bubble Heatmap)
 new Chart(document.getElementById('revenuePerformanceHeatmap'), {
     type: 'bubble',
     data: {
@@ -168,7 +166,7 @@ new Chart(document.getElementById('revenuePerformanceHeatmap'), {
                     { x: 50, y: 90, r: 20 },
                     { x: 20, y: 20, r: 10 }
                 ],
-                backgroundColor: function(context) {
+                backgroundColor: context => {
                     const value = context.raw.r;
                     const alpha = Math.min(value / 30, 1);
                     return `rgba(255, 127, 50, ${alpha})`;
@@ -180,46 +178,13 @@ new Chart(document.getElementById('revenuePerformanceHeatmap'), {
     },
     options: {
         responsive: true,
+        maintainAspectRatio: false,  // 🔥 Fix kích thước
         scales: {
-            x: {
-                min: 0,
-                max: 100,
-                grid: { display: false },
-                title: { display: true, text: 'Performance (%)' }
-            },
-            y: {
-                min: 0,
-                max: 100,
-                grid: { display: false },
-                title: { display: true, text: 'Market Position (%)' }
-            }
+            x: { min: 0, max: 100 },
+            y: { min: 0, max: 100 }
         },
         plugins: {
-            legend: { display: false },
-            tooltip: {
-                callbacks: {
-                    label: context => `Revenue: ${context.raw.r * 10}M VND`
-                }
-            }
+            legend: { display: false }
         }
     }
-});
-
-// Section Filter Logic for Dropdown
-function showSection(sectionId) {
-    // Hide all sections
-    document.querySelectorAll('.filter-section').forEach(section => {
-        section.classList.remove('active');
-    });
-
-    // Show the selected section
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-        targetSection.classList.add('active');
-    }
-}
-
-// Show the first section by default
-document.addEventListener('DOMContentLoaded', () => {
-    showSection('menu');
 });
