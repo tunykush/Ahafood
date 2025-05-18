@@ -189,7 +189,7 @@ function showCoinPopup() {
     popup.innerHTML = `
         <div class="popup-content">
             <img src="/images/coinpopup.png" alt="coin" class="coin-img" />
-            <span>+100 Coins</span>
+            <span>+50 Coins</span>
             <button onclick="closeCoinPopup()">OK</button>
         </div>
     `;
