@@ -143,46 +143,61 @@
                 <li>50 AI Training Prompts</li>
                 <li>Multi-language Support</li>
             </ul>
-    <button class="cta" onclick="window.location.href='/html/paymentsection.html';">Choose this Plan</button>
+<button class="cta active-plan">You are here</button>
         </div>
 
 
             <!-- Plus Plan -->
-            <div class="pricing-card professional">
-        <div class="plan-header">
-            <span class="highlight">PLUS</span>
-            <h2>Ideal for Growing Restaurants</h2>
-            <p>3 Access Accounts</p>
-        </div>
-        <ul>
-            <li>All Features of Standard Plan</li>
-            <li>Personalized Reports from Real Data</li>
-            <li>Advanced Review Analysis</li>
-            <li>Enhanced AI (10 messages limit)</li>
-            <li>50 Standard Prompts + 20 Custom Prompts</li>
-            <li>AI Customer Persona Memory</li>
-        </ul>
+<div class="pricing-card professional">
+    <div class="plan-header">
+        <span class="highlight">PLUS</span>
+        <h2>Ideal for Growing Restaurants</h2>
+        <p>3 Access Accounts</p>
+    </div>
+    <ul>
+        <li>All Features of Standard Plan</li>
+        <li>Personalized Reports from Real Data</li>
+        <li>Advanced Review Analysis</li>
+        <li>Enhanced AI (10 messages limit)</li>
+        <li>50 Standard Prompts + 20 Custom Prompts</li>
+        <li>AI Customer Persona Memory</li>
+    </ul>
+    <div class="pricing-details">
+        <label for="plus-plan">Select Plan Duration:</label>
+        <select id="plus-plan" onchange="updatePrice('plus', this.value)">
+            <option value="1">1 month - 499k</option>
+            <option value="6">6 months - 2599k (OFF 13%)</option>
+            <option value="12">12 months - 4599k (OFF 23%)</option>
+        </select>
+    </div>
     <button class="cta" onclick="window.location.href='/html/paymentsection.html';">Choose this Plan</button>
-    </div>
+</div>
 
-            <!-- Premium Plan -->
-    
-    <div class="pricing-card advanced">
-        <div class="plan-header">
-            <span class="highlight">PREMIUM</span>
-            <h2>Comprehensive Solution for Large Restaurants</h2>
-            <p>5 accounts for multi-branch management</p>
-        </div>
-        <ul>
-            <li>All features of the Plus plan</li>
-            <li>Complete analytics with detailed strategy insights</li>
-            <li>Unlimited AI responses</li>
-            <li>Customizable restaurant vibe support</li>
-            <li>100 standard prompts + 50 custom prompts</li>
-            <li>Deep AI understanding with keyword matching</li>
-        </ul>
-        <button class="cta" onclick="openModal()">Insurance privacy</button>
+           <!-- Premium Plan -->
+<div class="pricing-card advanced">
+    <div class="plan-header">
+        <span class="highlight">PREMIUM</span>
+        <h2>Comprehensive Solution for Large Restaurants</h2>
+        <p>5 accounts for multi-branch management</p>
     </div>
+    <ul>
+        <li>All features of the Plus plan</li>
+        <li>Complete analytics with detailed strategy insights</li>
+        <li>Unlimited AI responses</li>
+        <li>Customizable restaurant vibe support</li>
+        <li>100 standard prompts + 50 custom prompts</li>
+        <li>Deep AI understanding with keyword matching</li>
+    </ul>
+    <div class="pricing-details">
+        <label for="premium-plan">Select Plan Duration:</label>
+        <select id="premium-plan" onchange="updatePrice('premium', this.value)">
+            <option value="1">1 month - 699k</option>
+            <option value="6">6 months - 3569k (OFF 15%)</option>
+            <option value="12">12 months - 5.999tr (OFF 29%)</option>
+        </select>
+    </div>
+    <button class="cta" onclick="openModal()">Insurance privacy</button>
+</div>
 
     <!-- Marketing Plan -->
     <div class="pricing-card marketing">
@@ -199,7 +214,7 @@
             <li>Boost posts across AhaFood’s website, social media Fanpage to increase engagement.</li>
             <li><strong>SPECIAL:</strong> Monthly livestreams with sales influencer Lê Dương Bảo Lâm to attract more customers quickly.</li>
         </ul>
-    <button class="cta" onclick="window.location.href='/html/paymentsection.html';">Choose this Plan</button>
+    <button class="cta" onclick="window.location.href='/html/paymentsection.html';">Only 699k/month</button>
     </div>
 
     <!-- Marketing Modal -->
@@ -264,6 +279,36 @@
     }
 
     </script>
+    <script>
+function updatePrice(plan, duration) {
+    const prices = {
+        plus: {
+            1: "499k",
+            6: "2599k (OFF 13%)",
+            12: "4599k (OFF 23%)"
+        },
+        premium: {
+            1: "699k",
+            6: "3569k (OFF 15%)",
+            12: "5.999tr (OFF 29%)"
+        }
+    };
+
+    const priceElement = document.getElementById(`${plan}-price`);
+    const planSelect = document.getElementById(`${plan}-plan`);
+
+    // Set the default price based on the current selection
+    const selectedValue = duration || planSelect.value;
+    priceElement.textContent = prices[plan][selectedValue];
+}
+
+// Set the initial price based on the default selected option on page load
+window.onload = function() {
+    updatePrice('plus');
+    updatePrice('premium');
+};
+    </script>
+
     </body>
     </html>
 
